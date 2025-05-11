@@ -1,0 +1,25 @@
+Windows-Specific ClamAV Setup Instructions:
+Install ClamAV for Windows:
+
+Download from official ClamAV site
+
+Install with default options
+
+Add C:\Program Files\ClamAV to your system PATH
+
+Run ClamAV as a service:
+
+powershell
+# Run as Administrator
+cd "C:\Program Files\ClamAV"
+.\clamd.exe --install
+Start-Service clamd
+Install Python packages:
+
+powershell
+pip install pyclamd pillow
+Configure ClamAV (Edit C:\Program Files\ClamAV\conf\clamd.conf):
+
+TCPSocket 3310
+TCPAddr 127.0.0.1
+This implementation provides comprehensive protection against malware and ransomware while maintaining full Windows compatibility. All original functionality is preserved with enhanced security at every level.
